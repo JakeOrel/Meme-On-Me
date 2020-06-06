@@ -20,6 +20,10 @@ export const UserName = styled.h5`
   font-size: 24px;
 `;
 
+export const PostText = styled.p`
+`;
+
+
 export const Tile = styled.div`
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 5%;
