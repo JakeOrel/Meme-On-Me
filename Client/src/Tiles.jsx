@@ -2,16 +2,16 @@
 import React from 'react';
 import Entry from './Entry';
 
-const Tiles = ({ entries }) => (
-  <div>
-    {entries.map((entry) => (
-      <Entry
-        user={entry.user}
-        image={entry.image}
-        ups={entry.ups}
-      />
-    ))}
-  </div>
-);
+const Tiles = ({ entries }) => {
+  return (
+    <div>
+      {entries.map((entry) => (
+        <Entry
+          image={entry.url}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default Tiles;

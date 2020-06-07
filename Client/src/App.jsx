@@ -8,29 +8,29 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      entries: [{ user: 'johnny bravo', ups: 100, thumbnail: 'https://b.thumbs.redditmedia.com/pyRe8UVjyJrmihhw2B5DvBEh5sElYaEOXrbNTswqshU.jpg' }],
+      entries: [],
     };
   }
 
-  // componentDidMount() {
-  //   this.getPosts();
-  // }
+  componentDidMount() {
+    this.getPosts();
+  }
 
-  // getPosts() {
-  //   let uName = 'home';
-  //   const url = window.location.href;
-  //   const query = url.slice(url.indexOf('?'));
-  //   const params = new URLSearchParams(query);
-  //   if (params.get('user') !== null) {
-  //     uName = params.get('user');
-  //   }
-  //   axios.get(`/${uName}`)
-  //     .then((data) => {
-  //       this.setState({
-  //         entries: data,
-  //       });
-  //     });
-  // }
+  getPosts() {
+    let uName = 'home';
+    const url = window.location.href;
+    const query = url.slice(url.indexOf('?'));
+    const params = new URLSearchParams(query);
+    if (params.get('user') !== null) {
+      uName = params.get('user');
+    }
+    axios.get('/home')
+      .then((result) => {
+        this.setState({
+          entries: result.data,
+        });
+      });
+  }
 
   render() {
     const { entries } = this.state;
