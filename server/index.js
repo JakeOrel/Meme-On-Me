@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 const dotenv = require('dotenv');
-const reddit = require('./controller/FetchReddit');
+const reddit = require('./controller/FetchMemes');
 
 dotenv.config();
 app.use(express.json());
