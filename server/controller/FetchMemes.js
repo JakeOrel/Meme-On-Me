@@ -32,7 +32,7 @@ exports.getMemes = (req, res) => {
     if (err) {
       res.send(404);
     } else {
-      res.send(data);
+      res.send(data[0].memes);
     }
   });
 };
