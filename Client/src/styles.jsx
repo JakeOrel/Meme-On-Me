@@ -23,6 +23,7 @@ export const UserName = styled.h5`
 export const Tile = styled.div`
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 5%;
+  margin-top: 10px;
 `;
 
 export const Up = styled.button`
