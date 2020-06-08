@@ -10,7 +10,7 @@ export const Header = styled.div`
 `;
 
 export const TileHolder = styled.div`
-  margin-top: 10%;
+  margin-top: 8%;
   margin-left: 30vw;
   width: 45vw;
 `;
@@ -23,6 +23,7 @@ export const UserName = styled.h5`
 export const Tile = styled.div`
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 5%;
+  margin-top: 10px;
 `;
 
 export const Up = styled.button`
@@ -31,4 +32,9 @@ export const Up = styled.button`
   height: 40px;
   width: 40px;
   border-radius: 20px;
+`;
+
+export const Meme = styled.img`
+  width: 20vw;
+  height: 15vw;
 `;

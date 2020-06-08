@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Tile, UserName, Up } from './styles';
+import {
+  Tile, Up, Meme, UserName,
+} from './styles';
 
-const Entry = ({ user, image, ups }) => (
+const Entry = ({
+  image, ups, author,
+}) => (
   <Tile>
-    <UserName>
-      {user}
-    </UserName>
+    <UserName>{author}</UserName>
+    <Meme src={image} alt="" />
     <Up type="button">{ups}</Up>
   </Tile>
 );

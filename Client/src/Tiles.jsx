@@ -6,9 +6,8 @@ const Tiles = ({ entries }) => (
   <div>
     {entries.map((entry) => (
       <Entry
-        user={entry.user}
-        image={entry.image}
-        ups={entry.ups}
+        ups={Math.floor(Math.random() * (10000 - 1) + 1)}
+        image={entry.url}
       />
     ))}
   </div>
