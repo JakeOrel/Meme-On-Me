@@ -32,15 +32,18 @@ exports.getMemes = (req, res) => {
     if (err) {
       res.send(404);
     } else {
-      res.send(data);
+      res.send(data[0].memes);
     }
   });
 };
 
 // add to default memes
 exports.addMemes = (req, res) => {
-  const { memes, line1, line2 } = req.body;
-  db.addMemes(memes, line1, line2, (err, data) => {
+  const {
+    memes, line1, line2, color,
+  } = req.body;
+
+  db.addMemes(memes, line1, line2, color, (err, data) => {
     if (err) {
       res.send(500);
     } else {
@@ -48,3 +51,17 @@ exports.addMemes = (req, res) => {
     }
   });
 };
+
+exports.getTemplates = (req, res) => {
+  db.getMemes((err, data) => {
+    if (err) {
+      res.send(404);
+    } else {
+      const templates = [];
+      for (let i = 0; i <= 9; i += 1) {
+        templates.push(data[0].memes[i]);
+      }
+      res.send(templates);
+    }
+  });
+}

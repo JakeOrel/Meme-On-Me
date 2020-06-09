@@ -6,8 +6,10 @@ const Tiles = ({ entries }) => (
   <div>
     {entries.map((entry) => (
       <Entry
-        ups={Math.floor(Math.random() * (10000 - 1) + 1)}
-        image={entry.url}
+        image={entry.img}
+        color={entry.color}
+        top={entry.line1}
+        bottom={entry.line2}
       />
     ))}
   </div>

@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  Tile, Up, Meme, UserName,
+  Tile, Meme, TopLine, BottomLine,
 } from './styles';
 
 const Entry = ({
-  image, ups, author,
+  image, color, top, bottom,
 }) => (
   <Tile>
-    <UserName>{author}</UserName>
+    <TopLine style={{ color }}>{top}</TopLine>
+    <BottomLine style={{ color }}>{bottom}</BottomLine>
     <Meme src={image} alt="" />
-    <Up type="button">{ups}</Up>
   </Tile>
 );
 

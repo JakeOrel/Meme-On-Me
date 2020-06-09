@@ -16,6 +16,7 @@ const memeSchema = new Schema({
     img: String,
     line1: String,
     line2: String,
+    color: String,
   }],
 });
 
