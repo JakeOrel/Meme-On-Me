@@ -10,10 +10,13 @@ app.use(express.static('public'));
 
 const { PORT } = process.env;
 
+// for default page load
 app.get('/memes', db.getMemes);
 
-app.get('/memes', db.getUserMemes);
+// user specific memes
+app.get('/memes/:id', db.getUserMemes);
 
+// add memes to the default list
 app.put('/memes', db.addMemes);
 
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));

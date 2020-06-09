@@ -39,8 +39,11 @@ exports.getMemes = (req, res) => {
 
 // add to default memes
 exports.addMemes = (req, res) => {
-  const { memes, line1, line2 } = req.body;
-  db.addMemes(memes, line1, line2, (err, data) => {
+  const {
+    memes, line1, line2, color,
+  } = req.body;
+
+  db.addMemes(memes, line1, line2, color, (err, data) => {
     if (err) {
       res.send(500);
     } else {
