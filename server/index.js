@@ -16,6 +16,9 @@ app.get('/memes', db.getMemes);
 // user specific memes
 app.get('/memes/:id', db.getUserMemes);
 
+// get templates
+app.get('/templates', db.getTemplates);
+
 // add memes to the default list
 app.put('/memes', db.addMemes);
 

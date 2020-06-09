@@ -51,3 +51,17 @@ exports.addMemes = (req, res) => {
     }
   });
 };
+
+exports.getTemplates = (req, res) => {
+  db.getMemes((err, data) => {
+    if (err) {
+      res.send(404);
+    } else {
+      const templates = [];
+      for (let i = 0; i <= 9; i += 1) {
+        templates.push(data[0].memes[i]);
+      }
+      res.send(templates);
+    }
+  });
+}
