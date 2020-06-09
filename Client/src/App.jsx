@@ -47,7 +47,6 @@ class App extends React.Component {
     axios.get('/memes')
       .then((result) => {
         result.data.reverse();
-        console.log(result);
         this.setState({
           memes: result.data,
         });

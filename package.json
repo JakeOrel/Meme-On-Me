@@ -1,5 +1,5 @@
 {
-  "name": "hrr45-mvp",
+  "name": "memeonme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/JakeOrel/hrr45-mvp.git"
   },
-  "keywords": [],
+  "keywords": [
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
