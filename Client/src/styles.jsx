@@ -2,19 +2,15 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  display: grid;
-  grid-template-areas:
-  'addMeme' 'title';
-  grid-template-columns: 1fr 1fr;
   border: 1px solid grey;
   height: 10vh;
   background-color: rgba(255, 255, 255, 0.1);
 `;
 
 export const Title = styled.p`
-  grid-area: title;
   color: #be79df;
   font-size: 45px;
+  margin-left: 43vw;
 `;
 
 export const TileHolder = styled.div`
@@ -24,6 +20,18 @@ export const TileHolder = styled.div`
 
 export const UserName = styled.h5`
   color: #be79df;
+  font-size: 24px;
+`;
+
+export const TopLine = styled.div`
+  position: absolute;
+  margin-top: -50vw;
+  font-size: 24px;
+`;
+
+export const BottomLine = styled.div`
+  position: absolute;
+  margin-top: 8vw;
   font-size: 24px;
 `;
 
@@ -53,11 +61,11 @@ export const Meme = styled.img`
 `;
 
 export const NewMeme = styled.button`
-  grid-area: addMeme;
   width: 20vw;
   height: 5vh;
   border-radius: 7%;
   background-color: #be79df;
+  margin-top: -20vw;
 `;
 
 export const Container = styled.div`
@@ -143,6 +151,9 @@ export const MemeTextForm = styled.form`
 export const MemeText = styled.input`
   height: 2vw;
   width: 10vw;
+  border-radius: 8%;
+  background-color: #be79df;
+  font-size: 18px;
 `;
 
 export const FormHolder = styled.div`
@@ -156,4 +167,22 @@ export const FormHolder = styled.div`
 export const FormLabel = styled.label`
   color: #be79df;
   font-size: 20px;
+`;
+
+export const MemeTxtColor = styled.input`
+  height: 2vw;
+  width: 10vw;
+  border-radius: 8%;
+  font-size: 18px;
+`;
+
+export const SaveMeme = styled.input`
+  width: 10vw;
+  heigh: 2vw;
+  border-radius: 8%;
+  background-color: #00bdaa;
+  border: none;
+  padding: 10px;
+  margin-top: 1vw;
+  font-size: 18px;
 `;

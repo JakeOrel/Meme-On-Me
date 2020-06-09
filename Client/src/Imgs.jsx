@@ -9,9 +9,6 @@ const Imgs = ({ entries, onClick }) => (
         key={key}
         number={key}
         onClick={(e) => onClick(e)}
-        color={entry.color}
-        top={entry.line1}
-        bottom={entry.lin2}
       />
     ))}
   </div>
