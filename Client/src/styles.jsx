@@ -2,16 +2,23 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  color: #be79df;
-  font-size: 28px;
+  display: grid;
+  grid-template-areas:
+  'addMeme' 'title';
+  grid-template-columns: 1fr 1fr;
   border: 1px solid grey;
-  text-align: center;
+  height: 10vh;
   background-color: rgba(255, 255, 255, 0.1);
+`;
+
+export const Title = styled.p`
+  grid-area: title;
+  color: #be79df;
+  font-size: 45px;
 `;
 
 export const TileHolder = styled.div`
   margin-top: 8%;
-  margin-left: 30vw;
   width: 45vw;
 `;
 
@@ -21,9 +28,15 @@ export const UserName = styled.h5`
 `;
 
 export const Tile = styled.div`
+  display: flex;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 5%;
   margin-top: 10px;
+  width: 50vw;
+  height: 35vw;
+  justify-content: center;
+  align-items: center;
+  border: solid grey 1px;
 `;
 
 export const Up = styled.button`
@@ -35,6 +48,112 @@ export const Up = styled.button`
 `;
 
 export const Meme = styled.img`
+  width: 35vw;
+  height: 32vw;
+`;
+
+export const NewMeme = styled.button`
+  grid-area: addMeme;
   width: 20vw;
-  height: 15vw;
+  height: 5vh;
+  border-radius: 7%;
+  background-color: #be79df;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MemeCreator = styled.div`
+  width: 50vw;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+`;
+
+export const ThumbNailHolder = styled.div`
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ImgBtn = styled.button`
+  padding: 5px;
+  border: none;
+  height: 70px;
+  width: 70px;
+  background-color: rgba(255, 255, 255, 0.08);
+`;
+
+export const Icon = styled.img`
+  width: 60px;
+  height: 60px;
+`;
+
+export const ModalWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  margin: auto;
+  width: 50vw;
+  height: 40vw;
+  margin-top: 20px;
+  border: 3px solid grey;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+`;
+
+export const MemeHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 8vw;
+  margin-left: 175px;
+`;
+
+export const MainMeme = styled.img`
+  width: 500px;
+  height: 500px;
+`;
+
+export const Line1 = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  display: block;
+`;
+
+export const Line2 = styled.div`
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  display: block;
+`;
+
+export const MemeTextForm = styled.form`
+`;
+
+export const MemeText = styled.input`
+  height: 2vw;
+  width: 10vw;
+`;
+
+export const FormHolder = styled.div`
+  position: absolute;
+  max-width: 200px;
+  max-height: 150px;
+  top: 50%;
+  left: 28%;
+`;
+
+export const FormLabel = styled.label`
+  color: #be79df;
+  font-size: 20px;
 `;
