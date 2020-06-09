@@ -25,8 +25,8 @@ export const UserName = styled.h5`
 
 export const TopLine = styled.div`
   position: absolute;
-  margin-top: -50vw;
   font-size: 24px;
+  margin-top: -10vw;
 `;
 
 export const BottomLine = styled.div`

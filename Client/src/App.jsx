@@ -47,6 +47,7 @@ class App extends React.Component {
     axios.get('/memes')
       .then((result) => {
         result.data.reverse();
+        console.log(result);
         this.setState({
           memes: result.data,
         });
@@ -65,7 +66,7 @@ class App extends React.Component {
   handleImageClick(e) {
     e.preventDefault();
     let imgIdx = e.target.alt;
-
+    console.log(e.target.src);
     if (!imgIdx) {
       imgIdx = 0;
     }
@@ -78,13 +79,10 @@ class App extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const {
-      line1, line2, memes, index, memeCreator, color,
+      line1, line2, index, memeCreator, color, templates,
     } = this.state;
 
-    const imgUrl = memes[index].img;
-    if (line1 === '' && line2 === '') {
-      return;
-    }
+    const imgUrl = templates[index].img;
     axios({
       method: 'PUT',
       url: '/memes',
