@@ -65,7 +65,6 @@ class App extends React.Component {
   handleImageClick(e) {
     e.preventDefault();
     let imgIdx = e.target.alt;
-    console.log(e.target.src);
     if (!imgIdx) {
       imgIdx = 0;
     }
