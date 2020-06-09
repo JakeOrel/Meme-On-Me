@@ -46,9 +46,14 @@ class App extends React.Component {
   getPosts() {
     axios.get('/memes')
       .then((result) => {
-        result.data.reverse();
+        const data = result.data.reverse();
+        const memes = [];
+
+        for (let i = 0; i < 10; i += 1) {
+          memes.push(data[i]);
+        }
         this.setState({
-          memes: result.data,
+          memes,
         });
       });
   }

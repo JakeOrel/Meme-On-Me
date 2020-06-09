@@ -26,13 +26,15 @@ export const UserName = styled.h5`
 export const TopLine = styled.div`
   position: absolute;
   font-size: 24px;
-  margin-top: -10vw;
+  margin-top: -11vw;
+  display: block;
 `;
 
 export const BottomLine = styled.div`
   position: absolute;
   margin-top: 8vw;
   font-size: 24px;
+  display: block;
 `;
 
 export const Tile = styled.div`
